@@ -1,0 +1,5 @@
+This is a number guessing Game using HTML and Java Script
+
+First you need to guess a number between 1-20
+then click check button.
+if its close it shows close and if not show it too.
