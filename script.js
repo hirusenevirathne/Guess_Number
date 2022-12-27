@@ -13,22 +13,32 @@ let highScore = 0;
 //Check Button click event
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(typeof guess);
+  //console.log(typeof guess);
   if (!guess) {
     //No input added
     document.querySelector('.message').textContent = '⭕ No Number!';
   } else if (guess == secretNumber) {
     //Correct Answer
     document.querySelector('.message').textContent = '🎉 Correct Number!';
-
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
 
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = String(highScore);
+    }
 
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secretNumber;
+    document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').textContent = secretNumber;
+
 
 
   } else if (guess > secretNumber) {
