@@ -10,6 +10,11 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
 
+const module = document.querySelector('.modal');
+const overLay = document.querySelector('.overlay');
+const btnCloseModule = document.querySelector('.close-modal');
+const btnOpenModule = document.querySelector('.show-modal');
+
 //Check Button click event
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
