@@ -16,6 +16,31 @@ const btnCloseModule = document.querySelector('.close-modal');
 const btnOpenModule = document.querySelector('.show-modal');
 
 //Check Button click event
+
+//add 'How to play' button funtion
+const openModal = function () {
+  module.classList.remove('hidden');
+  overLay.classList.remove('hidden');
+};
+const closeModal = function () {
+  module.classList.add('hidden');
+  overLay.classList.add('hidden');
+};
+btnOpenModule.addEventListener('click', openModal);
+
+btnCloseModule.addEventListener('click', closeModal);
+
+overLay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  //add ESC button function
+  if (e.key === 'Escape') {
+    if (!module.classList.contains('hidden')) {
+      closeModal();
+    }
+  }
+});
+
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
   console.log(typeof guess);
